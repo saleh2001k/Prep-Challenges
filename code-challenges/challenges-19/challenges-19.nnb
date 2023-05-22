@@ -1,0 +1,67 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Append And Delete](https://www.hackerrank.com/challenges/append-and-delete/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function appendAndDelete(s, t, k) {\n  if (k >= s.length + t.length) {\n    return \"Yes\";\n  }\n\n  let commonLength = 0;\n\n  for (let i = 0; i < Math.min(s.length, t.length); i++) {\n    if (s[i] === t[i]) {\n      commonLength++;\n    } else {\n      break;\n    }\n  }\n\n  if (\n    (k - s.length - t.length + 2 * commonLength) % 2 === 0 &&\n    k - s.length - t.length + 2 * commonLength >= 0\n  ) {\n    return \"Yes\";\n  }\n\n  return \"No\";\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Encryption](https://www.hackerrank.com/challenges/encryption/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function encryption(s) {\n  const sanitizedString = s.replace(/\\s/g, \"\");\n\n  const length = sanitizedString.length;\n  const sqrtLength = Math.sqrt(length);\n  const rows = Math.floor(sqrtLength);\n  const columns = Math.ceil(sqrtLength);\n\n  let encryptedString = \"\";\n\n  for (let i = 0; i < columns; i++) {\n    for (let j = i; j < length; j += columns) {\n      encryptedString += sanitizedString[j];\n    }\n    encryptedString += \" \";\n  }\n\n  return encryptedString.trim();\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [The Time In Words](https://www.hackerrank.com/challenges/the-time-in-words/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                ""
+            ],
+            "outputs": []
+        }
+    ]
+}
